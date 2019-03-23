@@ -2,20 +2,14 @@ import React from "react";
 import styled from "@emotion/styled";
 import "./app.css";
 
-import Greeting from "./components/Greeting";
-import Dependencies from "./components/Dependencies";
+import List from "./components/List";
 
 export default function App() {
   return (
     <Centered>
-      <Split>
-        <Panel>
-          <Greeting />
-        </Panel>
-        <Panel>
-          <Dependencies />
-        </Panel>
-      </Split>
+      <Panel>
+        <List />
+      </Panel>
     </Centered>
   );
 }
@@ -26,13 +20,6 @@ const Centered = styled.div`
   align-content: center;
   align-items: center;
   height: 100%;
-`;
-
-const Split = styled.div`
-  display: grid;
-  grid-template-columns: 40% auto;
-  width: 80%;
-  grid-gap: 30px;
 `;
 
 const Panel = styled.div`
